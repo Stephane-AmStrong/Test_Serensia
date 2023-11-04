@@ -1,9 +1,4 @@
-﻿using Exercice_1.Contracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
 namespace Exercice_1.Repository
 {
@@ -17,24 +12,31 @@ namespace Exercice_1.Repository
             // Calculer les scores de différence pour chaque terme
             var scores = choices.ToDictionary(choice => choice, choice => GetDifferenceScore(term, choice));
 
-            // Trier les termes par score de différence, puis par longueur, puis par ordre alphabétique
+            // Trier les termes par score de différence, en tenant compte du nombre de suggestions
             var sortedSuggestions = choices
+                .Where(choice => scores[choice] is not null)
                 .OrderBy(choice => scores[choice])
-                .ThenBy(choice => choice.Length)
-                .ThenBy(choice => choice)
                 .Take(numberOfSuggestions);
 
             return sortedSuggestions;
         }
 
-        public int GetDifferenceScore(string dest, string src)
+
+        public int? GetDifferenceScore(string term, string choice)
         {
-            if (dest.Length != src.Length) throw new ArgumentException("Les chaînes doivent avoir la même longueur.");
+            if (!term.Any() || !choice.Any()) throw new ArgumentException("Le terme et le choix doivent avoir au moins un caractère.");
 
             int score = 0;
-            for (int i = 0; i < dest.Length; i++)
+            int indexTerm = 0;
+            int indexChoice = choice.IndexOf(term[indexTerm]);
+
+            if (indexChoice < 0) return null;
+
+            while (indexTerm < term.Length && indexChoice < choice.Length)
             {
-                if (dest[i] != src[i]) score++;
+                if (term[indexTerm] != choice[indexChoice]) score++;
+                indexTerm++;
+                indexChoice++;
             }
 
             return score;
