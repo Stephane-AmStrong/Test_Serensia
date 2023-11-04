@@ -10,40 +10,6 @@ namespace Exercice_1Test
             _mockAmTheTest = new Mock<IAmTheTest>();
         }
 
-        #region UnitTestUsingTheory
-
-        [Theory]
-        [MemberData(nameof(TestData))]
-        public void GetSuggestionsUnitTest(string term, IEnumerable<string> choices, int numberOfSuggestions, IEnumerable<string> expectedResult)
-        {
-            //Arrange
-            _mockAmTheTest.Setup(repo => repo.GetSuggestions(term, choices, numberOfSuggestions))
-                .Returns(expectedResult);
-
-            //Act
-            var result = _mockAmTheTest.Object.GetSuggestions(term, choices, numberOfSuggestions);
-
-            //Assert
-            Assert.Equal(expectedResult, result);
-        }
-
-
-
-        public static TheoryData<string, IEnumerable<string>, int, IEnumerable<string>> TestData()
-        {
-            var data = new TheoryData<string, IEnumerable<string>, int, IEnumerable<string>>();
-
-            data.Add("gros", new List<string> { "gros", "gras", "graisse", "aggressif", "go" }, 2, new List<string> { "gros", "gras" });
-            data.Add("pomme", new List<string> { "banane", "cerise", "orange" }, 2, new List<string>());
-            data.Add("gros", new List<string>(), 2, new List<string>());
-            return data;
-        }
-
-        #endregion
-
-
-        #region UnitTestUsingFacts
-
         [Fact]
         public void GetSuggestions_ReturnsMatchingSuggestions()
         {
@@ -155,8 +121,6 @@ namespace Exercice_1Test
             Assert.Throws<ArgumentException>(() => _mockAmTheTest.Object.GetDifferenceScore(dest, src));
 
         }
-
-        #endregion
 
     }
 }
