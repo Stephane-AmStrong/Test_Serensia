@@ -3,17 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice_1", "Exercice_1\Exercice_1.csproj", "{4D3FCE9A-D4A3-4711-9F6A-AF0AA17D565D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice_1", "src\Exercice_1\Exercice_1.csproj", "{4D3FCE9A-D4A3-4711-9F6A-AF0AA17D565D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice_2", "Exercice_2\Exercice_2.csproj", "{5CB0B0EE-8064-4999-BA62-751E1CAD667B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice_2", "src\Exercice_2\Exercice_2.csproj", "{5CB0B0EE-8064-4999-BA62-751E1CAD667B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice_3", "Exercice_3\Exercice_3.csproj", "{1631F398-5E52-4DBF-98B6-4EA4758A39D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice_3", "src\Exercice_3\Exercice_3.csproj", "{1631F398-5E52-4DBF-98B6-4EA4758A39D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice_1Test", "Exercice_1Test\Exercice_1Test.csproj", "{8EDC933B-DC43-4D05-99C6-6C90822BB61A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice_1Test", "test\Exercice_1Test\Exercice_1Test.csproj", "{8EDC933B-DC43-4D05-99C6-6C90822BB61A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice_2Test", "Exercice_2Test\Exercice_2Test.csproj", "{E2DEE1B8-52D1-42CB-88E0-33884E819523}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice_2Test", "test\Exercice_2Test\Exercice_2Test.csproj", "{E2DEE1B8-52D1-42CB-88E0-33884E819523}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice_3Test", "Exercice_3Test\Exercice_3Test.csproj", "{91DB7922-BE4F-45BC-AC63-01970FF08DF2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice_3Test", "test\Exercice_3Test\Exercice_3Test.csproj", "{91DB7922-BE4F-45BC-AC63-01970FF08DF2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8C9470F3-99BF-4704-93A7-C37FC4639F53}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{F3ACA09D-CCD9-4480-94A9-E1069470A187}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +52,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4D3FCE9A-D4A3-4711-9F6A-AF0AA17D565D} = {8C9470F3-99BF-4704-93A7-C37FC4639F53}
+		{5CB0B0EE-8064-4999-BA62-751E1CAD667B} = {8C9470F3-99BF-4704-93A7-C37FC4639F53}
+		{1631F398-5E52-4DBF-98B6-4EA4758A39D7} = {8C9470F3-99BF-4704-93A7-C37FC4639F53}
+		{8EDC933B-DC43-4D05-99C6-6C90822BB61A} = {F3ACA09D-CCD9-4480-94A9-E1069470A187}
+		{E2DEE1B8-52D1-42CB-88E0-33884E819523} = {F3ACA09D-CCD9-4480-94A9-E1069470A187}
+		{91DB7922-BE4F-45BC-AC63-01970FF08DF2} = {F3ACA09D-CCD9-4480-94A9-E1069470A187}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F101B15B-4C54-4D96-9A2F-69DE6591159F}
