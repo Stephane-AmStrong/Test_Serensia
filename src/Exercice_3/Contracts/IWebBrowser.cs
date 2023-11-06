@@ -4,6 +4,6 @@
     public interface IWebBrowser
     {
         // Returns null if the url could not be visited.
-        string GetHtml(string url);
+        string? GetHtml(string url);
     }
 }

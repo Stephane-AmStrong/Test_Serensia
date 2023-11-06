@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Exercice_1.Repository
+﻿namespace Exercice_1.Repository
 {
     public class AmTheTest : IAmTheTest
     {

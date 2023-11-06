@@ -1,6 +1,3 @@
-using Exercice_2.Repository;
-using Moq;
-
 namespace Exercice_2Test
 {
     public class IAmTheTestUnitTest
