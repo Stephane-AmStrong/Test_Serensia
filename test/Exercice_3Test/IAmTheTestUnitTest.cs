@@ -1,6 +1,3 @@
-
-using Exercice_3.Repository;
-
 namespace Exercice_3Test
 {
     public class IAmTheTestUnitTest
